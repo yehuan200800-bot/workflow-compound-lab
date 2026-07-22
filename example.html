@@ -61,7 +61,10 @@
     .unknown { text-decoration:underline; text-decoration-color:var(--rust); text-decoration-thickness:3px; text-underline-offset:4px; }
     .cta { margin:64px 0; padding:38px; border:2px solid var(--line); background:var(--acid); box-shadow:9px 9px 0 var(--line); }
     .cta h2 { max-width:720px; }
+    .cta-links { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
     .cta a { display:inline-block; padding:15px 20px; background:var(--ink); color:var(--paper); text-decoration:none; font-weight:700; }
+    .cta a.secondary-contact { background:transparent; color:var(--ink); border:1px solid var(--ink); }
+    .contact-note { margin:14px 0 0; font-size:14px; color:var(--muted); }
     footer { padding:28px 0 50px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:16px; }
     .footer-brand { color:var(--ink); font-weight:700; }
     @media (max-width:720px) { html{scroll-padding-top:0}.stage-nav{display:none}.stage { grid-template-columns:1fr; gap:20px; scroll-margin-top:0; } .hero { padding-top:50px; } .raw,.brief,.cta { padding:24px; } header { position:static;align-items:flex-start;padding:20px 0}.questions li:hover{transform:none}footer{flex-direction:column} }
@@ -127,7 +130,8 @@
     <section class="cta" id="apply">
       <h2>不要听演示。拿你们下一条真实需求跑一次。</h2>
       <p>只需要脱敏后的原始需求，不提交客户姓名、账号或其他敏感信息。第一份由我陪实际使用者完成。</p>
-      <a href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">申请首批使用 →</a>
+      <div class="cta-links"><a href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">申请首批使用 →</a><a class="secondary-contact" href="https://www.xiaohongshu.com/user/profile/691807a0000000003702a03c" target="_blank" rel="noopener">飞书打不开？私信“试跑” →</a></div>
+      <p class="contact-note">私信只需发送“试跑”，不要发送未脱敏客户资料。</p>
     </section>
   </main>
   <footer><span class="footer-brand">流程复利实验室 © 2026</span><span>合成案例会明确标注，真实案例公开前必须另行授权并脱敏。</span></footer>

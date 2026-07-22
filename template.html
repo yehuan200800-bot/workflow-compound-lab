@@ -54,7 +54,7 @@
     #status{min-height:30px;margin:18px 0 0;font-weight:700;color:var(--rust);line-height:1.5}
     #fallback{display:none;min-height:260px;margin-top:12px}
     .next{margin:68px 0;padding:38px;border:2px solid var(--line);background:var(--ink);color:var(--paper);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
-    .next h2{margin:0 0 12px;font-size:clamp(31px,4.8vw,54px);line-height:1.08}.next p{margin:0;font-size:17px;line-height:1.7}.next-links{display:grid;gap:12px;min-width:250px}.next a{padding:14px 18px;text-align:center;text-decoration:none;background:var(--acid);color:var(--ink);font-weight:700}.next a:last-child{background:var(--paper)}
+    .next h2{margin:0 0 12px;font-size:clamp(31px,4.8vw,54px);line-height:1.08}.next p{margin:0;font-size:17px;line-height:1.7}.next-links{display:grid;gap:12px;min-width:250px}.next a{padding:14px 18px;text-align:center;text-decoration:none;background:var(--acid);color:var(--ink);font-weight:700}.next a.apply-primary{background:var(--paper)}.next a.contact-secondary{background:transparent;color:var(--paper);border:1px solid var(--paper)}
     footer{padding:28px 0 50px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;color:var(--muted);font-size:13px}
     @media(max-width:760px){.hero{grid-template-columns:1fr;gap:34px;padding-top:50px}.instruction{transform:none}.meta,.actions{grid-template-columns:1fr}.question{grid-template-columns:48px 1fr;gap:12px}.question textarea{grid-column:1/-1}.next{grid-template-columns:1fr;padding:26px}.next-links{min-width:0}footer{flex-direction:column}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -95,7 +95,7 @@
 
     <section class="next">
       <div><h2>清单能补信息，工作流要负责重复运行。</h2><p>如果你想先看它怎样从零散原话生成一页 Brief，可以查看完整合成案例。团队有真实、可脱敏项目时，再申请首批使用。</p></div>
-      <div class="next-links"><a href="example.html">查看完整案例 →</a><a href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">申请首批使用 →</a></div>
+      <div class="next-links"><a href="example.html">查看完整案例 →</a><a class="apply-primary" href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">申请首批使用 →</a><a class="contact-secondary" href="https://www.xiaohongshu.com/user/profile/691807a0000000003702a03c" target="_blank" rel="noopener">飞书打不开？私信“试跑” →</a></div>
     </section>
   </main>
   <footer><span>流程复利实验室 © 2026</span><span>不采集账号密码、付款信息或未经授权的私人资料</span></footer>

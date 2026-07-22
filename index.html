@@ -40,7 +40,8 @@
     label.wide { grid-column:1/-1; }
     input, textarea { width:100%; border:1px solid var(--line); background:#fbf8ee; padding:14px; color:var(--ink); font:16px inherit; border-radius:0; }
     textarea { min-height:110px; resize:vertical; }
-    button { grid-column:1/-1; cursor:pointer; border:2px solid var(--line); background:var(--acid); color:var(--ink); padding:17px 22px; font:bold 18px "FangSong","STFangsong",serif; box-shadow:6px 6px 0 var(--line); }
+    button, .direct-apply { grid-column:1/-1; cursor:pointer; border:2px solid var(--line); background:var(--acid); color:var(--ink); padding:17px 22px; font:bold 18px "FangSong","STFangsong",serif; box-shadow:6px 6px 0 var(--line); text-align:center; text-decoration:none; }
+    .direct-apply { background:var(--ink); color:var(--paper); margin-top:4px; }
     button:active { transform:translate(4px,4px); box-shadow:2px 2px 0 var(--line); }
     #feedback { grid-column:1/-1; min-height:24px; color:var(--rust); font-weight:700; }
     footer { padding:30px 0 60px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:13px; }
@@ -92,6 +93,7 @@
           <label>每月项目数<input name="projects" inputmode="numeric" placeholder="大约数量"></label>
           <label class="wide">最近一次因需求不清造成的返工<textarea name="problem" required placeholder="请描述真实情况，不需要写漂亮"></textarea></label>
           <button type="submit">生成申请文本</button>
+          <a class="direct-apply" href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">直接填写飞书申请表 →</a>
           <div id="feedback" role="status" aria-live="polite"></div>
         </form>
       </div>

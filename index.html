@@ -47,7 +47,8 @@
     label.wide { grid-column:1/-1; }
     input, textarea { width:100%; border:1px solid var(--line); background:#fbf8ee; padding:14px; color:var(--ink); font:16px inherit; border-radius:0; }
     textarea { min-height:110px; resize:vertical; }
-    button, .direct-apply { grid-column:1/-1; cursor:pointer; border:2px solid var(--line); background:var(--acid); color:var(--ink); padding:17px 22px; font:bold 18px "FangSong","STFangsong",serif; box-shadow:6px 6px 0 var(--line); text-align:center; text-decoration:none; }
+    button, .direct-apply, .example-link { grid-column:1/-1; cursor:pointer; border:2px solid var(--line); background:var(--acid); color:var(--ink); padding:17px 22px; font:bold 18px "FangSong","STFangsong",serif; box-shadow:6px 6px 0 var(--line); text-align:center; text-decoration:none; }
+    .example-link { display:inline-block; margin-top:28px; background:var(--paper); }
     .direct-apply { background:var(--ink); color:var(--paper); margin-top:4px; }
     button:active { transform:translate(4px,4px); box-shadow:2px 2px 0 var(--line); }
     #feedback { grid-column:1/-1; min-height:24px; color:var(--rust); font-weight:700; }
@@ -105,6 +106,7 @@
             </ul>
           </div>
         </div>
+        <a class="example-link" href="example.html">查看完整合成案例：原始需求 → 一页 Brief →</a>
       </div>
     </section>
 

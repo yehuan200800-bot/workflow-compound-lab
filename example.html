@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="需求共识工作流的完整合成案例：从零散客户需求到可执行 Brief。">
+  <title>完整 Brief 示例｜流程复利实验室</title>
+  <style>
+    :root { --ink:#18211b; --paper:#f1eddf; --acid:#d9ff52; --rust:#e75b35; --line:#283129; --muted:#657066; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Songti SC","STSong","Noto Serif CJK SC",serif; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.2; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E"); }
+    header, main, footer { width:min(1040px, calc(100% - 36px)); margin:auto; position:relative; }
+    header { min-height:74px; display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line); }
+    a { color:inherit; }
+    .back { font-family:"FangSong","STFangsong",serif; text-decoration:none; border-bottom:1px solid; }
+    .tag { padding:7px 11px; border:1px solid; background:var(--acid); border-radius:100px; font-size:13px; }
+    .hero { padding:72px 0 48px; }
+    .eyebrow { font:13px "FangSong","STFangsong",serif; letter-spacing:.14em; }
+    h1 { max-width:850px; margin:18px 0 24px; font-size:clamp(48px,8vw,96px); line-height:.98; letter-spacing:-.045em; }
+    .lead { max-width:750px; font-size:20px; line-height:1.75; }
+    .notice { display:inline-block; margin-top:16px; padding:9px 13px; color:var(--rust); border:2px solid var(--rust); transform:rotate(-1deg); font-weight:700; }
+    .stage { border-top:1px solid var(--line); padding:62px 0; display:grid; grid-template-columns:220px 1fr; gap:48px; }
+    .stage-label { color:var(--muted); font-family:"FangSong","STFangsong",serif; }
+    h2 { margin:0 0 24px; font-size:clamp(34px,5vw,58px); line-height:1.08; }
+    h3 { margin:32px 0 12px; font-size:23px; }
+    p, li { font-size:17px; line-height:1.78; }
+    .raw { padding:28px; border:2px solid var(--line); background:#faf7ed; box-shadow:8px 8px 0 var(--line); }
+    .raw blockquote { margin:0; font-size:20px; line-height:1.8; }
+    .questions { counter-reset:q; display:grid; gap:10px; padding:0; list-style:none; }
+    .questions li { counter-increment:q; display:grid; grid-template-columns:38px 1fr; gap:12px; padding:14px; border-bottom:1px solid var(--line); }
+    .questions li::before { content:counter(q, decimal-leading-zero); font-family:"FangSong","STFangsong",serif; color:var(--rust); }
+    .brief { background:var(--ink); color:var(--paper); padding:36px; }
+    .brief h3 { color:var(--acid); }
+    .brief strong { color:var(--acid); }
+    .unknown { text-decoration:underline; text-decoration-color:var(--rust); text-decoration-thickness:3px; text-underline-offset:4px; }
+    .cta { margin:64px 0; padding:38px; border:2px solid var(--line); background:var(--acid); box-shadow:9px 9px 0 var(--line); }
+    .cta h2 { max-width:720px; }
+    .cta a { display:inline-block; padding:15px 20px; background:var(--ink); color:var(--paper); text-decoration:none; font-weight:700; }
+    footer { padding:28px 0 50px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    @media (max-width:720px) { .stage { grid-template-columns:1fr; gap:20px; } .hero { padding-top:50px; } .raw,.brief,.cta { padding:24px; } header { align-items:flex-start; padding:20px 0; } }
+  </style>
+</head>
+<body>
+  <header><a class="back" href="index.html">← 返回流程复利实验室</a><span class="tag">合成案例 · 非客户成果</span></header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">FULL BRIEF EXAMPLE / 001</div>
+      <h1>一句“专业一点”，不能直接开工。</h1>
+      <p class="lead">下面完整展示一段零散需求如何被拆出冲突、缺失信息和责任人。重点不是替客户写答案，而是在制作开始前把不知道的事标出来。</p>
+      <div class="notice">本页为合成案例，不代表真实客户效果</div>
+    </section>
+
+    <section class="stage">
+      <div class="stage-label">01 / 原始输入</div>
+      <div>
+        <h2>客户群里真实会出现的说法</h2>
+        <div class="raw"><blockquote>老板说这周要发一篇关于新品的内容，最好周四就能上。主要想显得专业一点，也希望有人来咨询。平台可能发小红书，也可能公众号一起发，你们看着来。新品资料之前发过，核心就是比原来的方便很多。不要写得太硬广，老板喜欢上次那篇的感觉。受众应该是企业客户，但普通用户也可能会看。价格暂时不要出现，案例可以写之前合作过的那几个，不过名字最好别露。先出一版看看，字数不用太长。小王审核，但老板最后可能还会改。</blockquote></div>
+        <h3>已知附件</h3>
+        <ul><li>一份旧版产品介绍</li><li>一篇“老板喜欢”的历史内容，但未说明喜欢什么</li><li>三张无文字说明的产品截图</li></ul>
+      </div>
+    </section>
+
+    <section class="stage">
+      <div class="stage-label">02 / 开工闸门</div>
+      <div>
+        <h2>先问清这 6 件事</h2>
+        <ol class="questions">
+          <li>第一目标读者是企业客户，还是普通消费者？</li>
+          <li>首发渠道是小红书、公众号，还是两个渠道分别制作？</li>
+          <li>新品相对旧版发生了哪三项可以证明的变化？</li>
+          <li>希望读者通过哪个入口咨询？</li>
+          <li>老板喜欢历史内容的结构、语气，还是视觉？</li>
+          <li>小王与老板之间，谁拥有最终发布批准权？</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="stage">
+      <div class="stage-label">03 / 一页 Brief</div>
+      <div class="brief">
+        <h2>信息不齐时，也要输出得诚实。</h2>
+        <h3>任务目标</h3>
+        <p>制作一篇新品介绍内容，在不采用强推销表达的前提下建立专业认知，并引导目标读者发起咨询。咨询数量及统计方式为<span class="unknown">未知</span>，补充后才能验证结果。</p>
+        <h3>目标读者</h3>
+        <p>以企业客户为主；是否兼顾普通消费者<span class="unknown">未知</span>。期望行动为发起咨询；咨询入口<span class="unknown">未知</span>。</p>
+        <h3>交付物</h3>
+        <ul><li>形式：图文，具体版式未知</li><li>数量：至少 1 篇</li><li>渠道：小红书或公众号，是否双平台未知</li><li>截止：本周四，具体时点未知</li><li>审核：小王初审，老板可能终审；顺序未知</li></ul>
+        <h3>冲突与风险</h3>
+        <ul><li>企业客户与普通用户的阅读需求不同，必须确定第一读者。</li><li>小红书与公众号的结构和转化入口不同，不能用“你们看着来”代替渠道决策。</li><li>匿名案例仍需确认事实与公开授权。</li><li>“更方便”等效果表达需要产品变化或用户证据支持。</li></ul>
+        <h3>下一步</h3>
+        <ul><li><strong>客户联系人</strong>｜回答 6 个开工问题｜今天 17:00 前</li><li><strong>产品负责人</strong>｜提供新品变化及证据｜今天 17:00 前</li><li><strong>小王</strong>｜确认审核顺序｜今天 18:00 前</li><li><strong>内容负责人</strong>｜信息齐全后制作首稿｜周三 15:00 前</li></ul>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>不要听演示。拿你们下一条真实需求跑一次。</h2>
+      <p>只需要脱敏后的原始需求，不提交客户姓名、账号或其他敏感信息。第一份由我陪实际使用者完成。</p>
+      <a href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">申请首批使用 →</a>
+    </section>
+  </main>
+  <footer>流程复利实验室 © 2026｜合成案例会明确标注，真实案例公开前必须另行授权并脱敏。</footer>
+</body>
+</html>

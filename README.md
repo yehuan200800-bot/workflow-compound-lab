@@ -1,13 +1,14 @@
 # 流程复利实验室
 
-面向 3–20 人内容服务团队的飞书 AI 交付工作流实验。
+面向 3–20 人内容服务团队的飞书 AI 交付工作流。
 
 首个验证产品把模糊的客户需求转成可执行、可验收的项目 Brief，目标是减少初稿完成后才补目标、素材边界和审核人的返工。
 
 ## 当前公开资产
 
-- [种子测试页面](https://yehuan200800-bot.github.io/workflow-compound-lab/)
-- [种子团队申请表](https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd)
+- [首批使用页面](https://yehuan200800-bot.github.io/workflow-compound-lab/)
+- [完整合成案例](https://yehuan200800-bot.github.io/workflow-compound-lab/example.html)
+- [团队申请表](https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd)
 
 ## 14 天验证标准
 

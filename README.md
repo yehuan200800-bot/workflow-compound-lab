@@ -9,8 +9,8 @@
 - [首批使用页面](https://yehuan200800-bot.github.io/workflow-compound-lab/)
 - [开工前 6 问模板](https://yehuan200800-bot.github.io/workflow-compound-lab/template.html)
 - [完整合成案例](https://yehuan200800-bot.github.io/workflow-compound-lab/example.html)
-- [团队申请表](https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd)
-- [备用联系入口：流程复利实验室小红书](https://www.xiaohongshu.com/user/profile/691807a0000000003702a03c)（私信“试跑”，不要发送未脱敏客户资料）
+- [首要联系入口：流程复利实验室小红书](https://www.xiaohongshu.com/user/profile/691807a0000000003702a03c)（先私信“试跑”，不要发送未脱敏客户资料）
+- [团队信息补充表](https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd)
 
 ## 14 天验证标准
 

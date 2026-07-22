@@ -147,9 +147,9 @@
       <div>
         <h2>有两个真实项目，<br>就可以申请。</h2>
         <p class="apply-note">适合 3–20 人内容服务团队：愿意提交脱敏需求，并在 14 天内实际运行三次。第一份由我陪实际使用者完成，申请约 2 分钟。</p>
-        <a class="direct-apply" href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">打开飞书申请表（约 2 分钟）→</a>
-        <a class="fallback-apply" href="https://www.xiaohongshu.com/user/profile/691807a0000000003702a03c" target="_blank" rel="noopener">飞书打不开？到小红书私信“试跑” →</a>
-        <p class="fallback-note">只需先发“试跑”，不必在私信中发送客户姓名、账号或未脱敏资料。</p>
+        <a class="direct-apply" href="https://www.xiaohongshu.com/user/profile/691807a0000000003702a03c" target="_blank" rel="noopener">先到小红书私信“试跑”（建立联系）→</a>
+        <a class="fallback-apply" href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">再填写飞书申请表（补充团队信息）→</a>
+        <p class="fallback-note">私信只需先发“试跑”，不必发送客户姓名、账号或未脱敏资料。</p>
         <div class="optional-label">想先整理再填写？下面的内容只在本地生成，不会上传。</div>
         <form id="pilot-form">
           <label>团队称呼<input name="team" required placeholder="例如：三人内容工作室"></label>
@@ -171,7 +171,7 @@
       event.preventDefault();
       const data = Object.fromEntries(new FormData(form));
       const text = `种子团队申请\n团队：${data.team}\n联系人：${data.name}\n人数：${data.size || '未填'}\n每月项目数：${data.projects || '未填'}\n开工后补充的信息：${data.problem}`;
-      try { await navigator.clipboard.writeText(text); feedback.textContent = '已复制。现在打开上方飞书申请表，按对应字段填写或粘贴。'; }
+      try { await navigator.clipboard.writeText(text); feedback.textContent = '已复制。现在先到上方小红书私信“试跑”建立联系，再按需填写飞书表单。'; }
       catch { feedback.textContent = text; }
     });
   </script>

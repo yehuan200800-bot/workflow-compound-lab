@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="给3–20人内容团队使用的飞书需求澄清工作流，招募5家种子团队。">
+  <title>别靠猜，先把需求说清楚｜流程复利实验室</title>
+  <style>
+    :root { --ink:#18211b; --paper:#f1eddf; --acid:#d9ff52; --rust:#e75b35; --line:#283129; --muted:#657066; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Songti SC","STSong","Noto Serif CJK SC",serif; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.23; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E"); }
+    header, main, footer { width:min(1120px, calc(100% - 36px)); margin:auto; position:relative; }
+    header { height:74px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); font-family:"FangSong","STFangsong",serif; }
+    .brand { font-weight:700; letter-spacing:.08em; }
+    .status { padding:7px 11px; border:1px solid; border-radius:100px; font-size:13px; background:var(--acid); }
+    .hero { min-height:620px; display:grid; grid-template-columns:1.35fr .65fr; gap:64px; align-items:center; padding:72px 0; }
+    .eyebrow { font-family:"FangSong","STFangsong",serif; letter-spacing:.14em; font-size:13px; text-transform:uppercase; }
+    h1 { margin:18px 0 24px; font-size:clamp(54px, 8.6vw, 118px); line-height:.92; letter-spacing:-.055em; font-weight:900; }
+    .lead { max-width:680px; font-size:clamp(18px, 2.2vw, 25px); line-height:1.65; }
+    .scribble { display:inline; box-shadow:inset 0 -.36em 0 var(--acid); }
+    .card { border:2px solid var(--line); padding:26px; background:#f8f5ea; box-shadow:10px 10px 0 var(--line); transform:rotate(1.5deg); }
+    .card h2 { margin:0 0 16px; font-size:28px; }
+    .card ol { padding-left:22px; line-height:1.8; }
+    .stamp { margin-top:25px; display:inline-block; color:var(--rust); border:3px solid var(--rust); padding:7px 12px; transform:rotate(-5deg); font-weight:700; }
+    .section { border-top:1px solid var(--line); padding:72px 0; }
+    .section-grid { display:grid; grid-template-columns: .7fr 1.3fr; gap:64px; }
+    .kicker { position:sticky; top:24px; align-self:start; font-family:"FangSong","STFangsong",serif; color:var(--muted); }
+    h2 { font-size:clamp(34px, 5vw, 64px); line-height:1.08; margin:0 0 28px; }
+    .outputs { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+    .output { min-height:150px; padding:22px; border:1px solid var(--line); background:rgba(255,255,255,.28); transition:.2s ease; }
+    .output:hover { background:var(--acid); transform:translateY(-4px); }
+    .output b { display:block; font-size:22px; margin-bottom:10px; }
+    .truth { background:var(--ink); color:var(--paper); margin-inline:calc((100vw - 100%)/-2); padding:84px max(18px, calc((100vw - 1120px)/2)); }
+    .truth blockquote { margin:0; max-width:1000px; font-size:clamp(34px, 5.8vw, 78px); line-height:1.15; }
+    .truth em { color:var(--acid); font-style:normal; }
+    form { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    label { display:grid; gap:8px; font-family:"FangSong","STFangsong",serif; }
+    label.wide { grid-column:1/-1; }
+    input, textarea { width:100%; border:1px solid var(--line); background:#fbf8ee; padding:14px; color:var(--ink); font:16px inherit; border-radius:0; }
+    textarea { min-height:110px; resize:vertical; }
+    button { grid-column:1/-1; cursor:pointer; border:2px solid var(--line); background:var(--acid); color:var(--ink); padding:17px 22px; font:bold 18px "FangSong","STFangsong",serif; box-shadow:6px 6px 0 var(--line); }
+    button:active { transform:translate(4px,4px); box-shadow:2px 2px 0 var(--line); }
+    #feedback { grid-column:1/-1; min-height:24px; color:var(--rust); font-weight:700; }
+    footer { padding:30px 0 60px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:13px; }
+    @media (max-width:760px) { .hero,.section-grid { grid-template-columns:1fr; gap:34px; } .hero { padding-top:48px; } .outputs,form { grid-template-columns:1fr; } label.wide,button { grid-column:auto; } .kicker { position:static; } .card { transform:none; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .output { transition:none; } }
+  </style>
+</head>
+<body>
+  <header><div class="brand">流程复利实验室 / 001</div><div class="status">种子团队 0 / 5</div></header>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Feishu workflow · 14-day field test</div>
+        <h1>别靠猜，<br>先把需求<br>说清楚。</h1>
+        <p class="lead">把客户零散的聊天记录、会议纪要和素材，整理成一份能直接开工的任务简报。<span class="scribble">不脑补、不漏项、不做到一半才返工。</span></p>
+      </div>
+      <aside class="card">
+        <h2>只招 5 家</h2>
+        <ol><li>免费安装到飞书</li><li>用两个真实脱敏项目</li><li>14 天内至少运行 3 次</li><li>两次 10 分钟回访</li></ol>
+        <div class="stamp">当前版本永久保留</div>
+      </aside>
+    </section>
+
+    <section class="section section-grid">
+      <div class="kicker">它交付什么 / 01</div>
+      <div>
+        <h2>不是又一份<br>提示词资料包。</h2>
+        <div class="outputs">
+          <div class="output"><b>一页任务简报</b>目标、读者、交付物、审核人与截止时间集中到一处。</div>
+          <div class="output"><b>缺失信息清单</b>区分“不开工无法完成”和“可以先做后补”。</div>
+          <div class="output"><b>冲突与风险提示</b>标出互相矛盾的资料，不把推测冒充事实。</div>
+          <div class="output"><b>明确的下一步</b>每件事写清责任人、动作和截止时间。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="truth">
+      <blockquote>判断它有没有用的唯一标准：<em>你的团队下周还会不会继续用。</em></blockquote>
+    </section>
+
+    <section class="section section-grid" id="apply">
+      <div class="kicker">申请内测 / 02</div>
+      <div>
+        <h2>拿真实项目<br>跑三次。</h2>
+        <form id="pilot-form">
+          <label>团队称呼<input name="team" required placeholder="例如：三人内容工作室"></label>
+          <label>联系称呼<input name="name" required placeholder="怎么称呼你"></label>
+          <label>团队人数<input name="size" inputmode="numeric" placeholder="3–20 人"></label>
+          <label>每月项目数<input name="projects" inputmode="numeric" placeholder="大约数量"></label>
+          <label class="wide">最近一次因需求不清造成的返工<textarea name="problem" required placeholder="请描述真实情况，不需要写漂亮"></textarea></label>
+          <button type="submit">生成申请文本</button>
+          <div id="feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><span>流程复利实验室 © 2026</span><span>不采集账号密码、付款信息或未经授权的私人资料</span></footer>
+  <script>
+    const form = document.querySelector('#pilot-form');
+    const feedback = document.querySelector('#feedback');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      const text = `种子团队申请\n团队：${data.team}\n联系人：${data.name}\n人数：${data.size || '未填'}\n每月项目数：${data.projects || '未填'}\n返工场景：${data.problem}`;
+      try { await navigator.clipboard.writeText(text); feedback.textContent = '申请文本已复制，请粘贴给招募联系人。'; }
+      catch { feedback.textContent = text; }
+    });
+  </script>
+</body>
+</html>

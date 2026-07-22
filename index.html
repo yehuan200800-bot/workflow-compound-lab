@@ -51,7 +51,9 @@
     .resource-links { display:flex; flex-wrap:wrap; gap:14px; margin-top:28px; }
     .example-link { display:inline-block; margin-top:0; background:var(--paper); }
     .example-link.template { background:var(--acid); }
-    .direct-apply { background:var(--ink); color:var(--paper); margin-top:4px; }
+    .direct-apply { display:block; background:var(--ink); color:var(--paper); margin-top:4px; }
+    .apply-note { max-width:720px; font-size:18px; line-height:1.75; }
+    .optional-label { margin:34px 0 16px; padding-top:24px; border-top:1px solid var(--line); font:700 15px "FangSong","STFangsong",serif; }
     button:active { transform:translate(4px,4px); box-shadow:2px 2px 0 var(--line); }
     #feedback { grid-column:1/-1; min-height:24px; color:var(--rust); font-weight:700; }
     footer { padding:30px 0 60px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:13px; }
@@ -122,15 +124,17 @@
     <section class="section section-grid" id="apply">
       <div class="kicker">申请首批使用 / 03</div>
       <div>
-        <h2>拿真实项目<br>跑三次。</h2>
+        <h2>有两个真实项目，<br>就可以申请。</h2>
+        <p class="apply-note">适合 3–20 人内容服务团队：愿意提交脱敏需求，并在 14 天内实际运行三次。第一份由我陪实际使用者完成，申请约 2 分钟。</p>
+        <a class="direct-apply" href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">打开飞书申请表（约 2 分钟）→</a>
+        <div class="optional-label">想先整理再填写？下面的内容只在本地生成，不会上传。</div>
         <form id="pilot-form">
           <label>团队称呼<input name="team" required placeholder="例如：三人内容工作室"></label>
           <label>联系称呼<input name="name" required placeholder="怎么称呼你"></label>
           <label>团队人数<input name="size" inputmode="numeric" placeholder="3–20 人"></label>
           <label>每月项目数<input name="projects" inputmode="numeric" placeholder="大约数量"></label>
           <label class="wide">最近一次因需求不清造成的返工<textarea name="problem" required placeholder="请描述真实情况，不需要写漂亮"></textarea></label>
-          <button type="submit">生成申请文本</button>
-          <a class="direct-apply" href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">直接填写飞书申请表 →</a>
+          <button type="submit">复制申请信息（可选）</button>
           <div id="feedback" role="status" aria-live="polite"></div>
         </form>
       </div>
@@ -144,7 +148,7 @@
       event.preventDefault();
       const data = Object.fromEntries(new FormData(form));
       const text = `种子团队申请\n团队：${data.team}\n联系人：${data.name}\n人数：${data.size || '未填'}\n每月项目数：${data.projects || '未填'}\n返工场景：${data.problem}`;
-      try { await navigator.clipboard.writeText(text); feedback.textContent = '申请文本已复制，请粘贴给招募联系人。'; }
+      try { await navigator.clipboard.writeText(text); feedback.textContent = '已复制。现在打开上方飞书申请表，按对应字段填写或粘贴。'; }
       catch { feedback.textContent = text; }
     });
   </script>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="给内容团队直接复制使用的开工前6问需求模板：目标、读者、交付、证据、禁区和最终批准人。">
+  <title>开工前 6 问｜流程复利实验室</title>
+  <style>
+    :root{--ink:#18211b;--paper:#f1eddf;--acid:#d9ff52;--rust:#e75b35;--line:#283129;--muted:#657066;--white:#fbf8ee;--shadow:10px 10px 0 var(--line)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:"Songti SC","STSong","Noto Serif CJK SC",serif}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E")}
+    header,main,footer{width:min(1080px,calc(100% - 36px));margin:auto;position:relative}
+    header{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px;border-bottom:1px solid var(--line)}
+    a{color:inherit}.back{font-family:"FangSong","STFangsong",serif;text-decoration:none;border-bottom:1px solid}.tag{padding:7px 11px;border:1px solid;border-radius:100px;background:var(--acid);font-size:13px}
+    .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:58px;padding:72px 0 54px;align-items:end}
+    .eyebrow{font:13px "FangSong","STFangsong",serif;letter-spacing:.14em;text-transform:uppercase}
+    h1{margin:18px 0 22px;font-size:clamp(56px,9vw,106px);line-height:.94;letter-spacing:-.05em}
+    .lead{font-size:20px;line-height:1.72;max-width:700px;margin:0}
+    .instruction{border:2px solid var(--line);padding:24px;background:var(--white);box-shadow:var(--shadow);transform:rotate(1deg)}
+    .instruction b{display:block;font:700 16px "FangSong","STFangsong",serif;margin-bottom:12px}.instruction ol{margin:0;padding-left:22px;line-height:1.8}
+    .privacy{margin-top:18px;color:var(--rust);font-weight:700;font-size:14px}
+    .sheet{border-top:1px solid var(--line);padding:54px 0 34px}
+    .meta{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:12px;margin-bottom:14px}
+    label{display:grid;gap:8px;font:700 14px "FangSong","STFangsong",serif;letter-spacing:.04em}
+    input,textarea{width:100%;border:1px solid var(--line);border-radius:0;background:var(--white);color:var(--ink);font:16px/1.6 "Songti SC","STSong","Noto Serif CJK SC",serif;padding:13px 14px}
+    input:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+    .questions{counter-reset:q;border:2px solid var(--line);background:rgba(255,255,255,.22)}
+    .question{counter-increment:q;display:grid;grid-template-columns:72px 260px 1fr;gap:20px;align-items:start;padding:22px;border-bottom:1px solid var(--line)}
+    .question:last-child{border-bottom:0}.question::before{content:counter(q,decimal-leading-zero);font:700 27px "FangSong","STFangsong",serif;color:var(--rust);padding-top:4px}
+    .prompt b{display:block;font-size:20px;margin-bottom:7px}.prompt span{display:block;color:var(--muted);font-size:14px;line-height:1.5}
+    .question textarea{min-height:96px;resize:vertical}
+    .actions{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px;margin-top:18px}
+    button,.secondary{min-height:58px;border:2px solid var(--line);border-radius:0;padding:14px 18px;cursor:pointer;font:700 17px "FangSong","STFangsong",serif;box-shadow:6px 6px 0 var(--line);text-align:center;text-decoration:none;display:grid;place-items:center}
+    button{background:var(--acid);color:var(--ink)}.secondary{background:var(--white)}button:active,.secondary:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--line)}
+    #status{min-height:30px;margin:18px 0 0;font-weight:700;color:var(--rust);line-height:1.5}
+    #fallback{display:none;min-height:260px;margin-top:12px}
+    .next{margin:68px 0;padding:38px;border:2px solid var(--line);background:var(--ink);color:var(--paper);display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+    .next h2{margin:0 0 12px;font-size:clamp(31px,4.8vw,54px);line-height:1.08}.next p{margin:0;font-size:17px;line-height:1.7}.next-links{display:grid;gap:12px;min-width:250px}.next a{padding:14px 18px;text-align:center;text-decoration:none;background:var(--acid);color:var(--ink);font-weight:700}.next a:last-child{background:var(--paper)}
+    footer{padding:28px 0 50px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:18px;color:var(--muted);font-size:13px}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;gap:34px;padding-top:50px}.instruction{transform:none}.meta,.actions{grid-template-columns:1fr}.question{grid-template-columns:48px 1fr;gap:12px}.question textarea{grid-column:1/-1}.next{grid-template-columns:1fr;padding:26px}.next-links{min-width:0}footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{body::before,header,.hero,.actions,#status,#fallback,.next,footer{display:none}.sheet{border:0;padding:0}.questions{break-inside:avoid}.question textarea{border:0;border-bottom:1px solid var(--line);background:#fff}}
+  </style>
+</head>
+<body>
+  <header><a class="back" href="index.html">← 返回流程复利实验室</a><span class="tag">公开模板 · 本地填写</span></header>
+  <main>
+    <section class="hero">
+      <div><div class="eyebrow">PROJECT INTAKE / 6 QUESTIONS</div><h1>写初稿前，<br>先问这 6 个问题。</h1><p class="lead">不是让客户写一份长问卷。项目经理可以让客户语音回答，再把答案整理到这一页。真正重要的是开工前留下共同记录。</p></div>
+      <aside class="instruction"><b>三分钟使用方法</b><ol><li>填写项目名称、负责人和截止时间。</li><li>逐项记录客户答案；不知道就写“待确认”。</li><li>复制成文本，发给双方确认后再开工。</li></ol><div class="privacy">本页不上传、不保存你填写的内容。</div></aside>
+    </section>
+
+    <section class="sheet" aria-labelledby="sheet-title">
+      <div class="eyebrow" id="sheet-title">可填写 / 可复制 / 可打印</div>
+      <div class="meta">
+        <label>项目名称<input id="project" autocomplete="off" placeholder="例如：新品发布图文"></label>
+        <label>项目负责人<input id="owner" autocomplete="off" placeholder="姓名或角色"></label>
+        <label>期望交付时间<input id="deadline" autocomplete="off" placeholder="日期 + 时间"></label>
+      </div>
+      <div class="questions">
+        <div class="question"><div class="prompt"><b>结果</b><span>不要只写“做一篇内容”</span></div><textarea id="q1" aria-label="这次内容希望读者产生什么变化" placeholder="这次内容希望读者知道、相信或采取什么行动？"></textarea></div>
+        <div class="question"><div class="prompt"><b>第一读者</b><span>不能回答“所有人”</span></div><textarea id="q2" aria-label="第一目标读者是谁" placeholder="第一目标读者是谁？他现在最在意什么？"></textarea></div>
+        <div class="question"><div class="prompt"><b>交付</b><span>渠道会改变内容结构</span></div><textarea id="q3" aria-label="首发渠道和最终交付物" placeholder="首发渠道、数量、规格和最终交付形式是什么？"></textarea></div>
+        <div class="question"><div class="prompt"><b>证据</b><span>事实必须有明确来源</span></div><textarea id="q4" aria-label="可使用的事实数据和案例" placeholder="哪些事实、数据、引语和案例已经确认可以使用？"></textarea></div>
+        <div class="question"><div class="prompt"><b>禁区</b><span>先写不能出现什么</span></div><textarea id="q5" aria-label="绝对不能出现的内容" placeholder="哪些承诺、表达、信息或素材绝对不能出现？"></textarea></div>
+        <div class="question"><div class="prompt"><b>最终批准</b><span>建议人不等于批准人</span></div><textarea id="q6" aria-label="最终发布批准人" placeholder="谁可以提出建议？谁拥有最终发布批准权？"></textarea></div>
+      </div>
+      <div class="actions">
+        <button type="button" id="copy">复制当前内容</button>
+        <button type="button" id="example" class="secondary">载入合成示例</button>
+        <button type="button" id="reset" class="secondary">清空全部答案</button>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+      <textarea id="fallback" aria-label="复制失败时显示的模板文本" readonly></textarea>
+    </section>
+
+    <section class="next">
+      <div><h2>清单能补信息，工作流要负责重复运行。</h2><p>如果你想先看它怎样从零散原话生成一页 Brief，可以查看完整合成案例。团队有真实、可脱敏项目时，再申请首批使用。</p></div>
+      <div class="next-links"><a href="example.html">查看完整案例 →</a><a href="https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd" target="_blank" rel="noopener">申请首批使用 →</a></div>
+    </section>
+  </main>
+  <footer><span>流程复利实验室 © 2026</span><span>不采集账号密码、付款信息或未经授权的私人资料</span></footer>
+  <script>
+    const fields={project:document.querySelector('#project'),owner:document.querySelector('#owner'),deadline:document.querySelector('#deadline'),q1:document.querySelector('#q1'),q2:document.querySelector('#q2'),q3:document.querySelector('#q3'),q4:document.querySelector('#q4'),q5:document.querySelector('#q5'),q6:document.querySelector('#q6')};
+    const status=document.querySelector('#status');
+    const fallback=document.querySelector('#fallback');
+    const value=(key)=>fields[key].value.trim()||'待确认';
+    const buildText=()=>`开工前 6 问\n项目：${value('project')}\n负责人：${value('owner')}\n交付时间：${value('deadline')}\n\n01｜结果\n${value('q1')}\n\n02｜第一读者\n${value('q2')}\n\n03｜交付\n${value('q3')}\n\n04｜证据\n${value('q4')}\n\n05｜禁区\n${value('q5')}\n\n06｜最终批准\n${value('q6')}\n\n— 流程复利实验室公开模板`;
+    const legacyCopy=(text)=>{const node=document.createElement('textarea');node.value=text;node.setAttribute('readonly','');node.style.position='fixed';node.style.opacity='0';document.body.append(node);node.select();const ok=document.execCommand('copy');node.remove();return ok};
+    document.querySelector('#copy').addEventListener('click',async()=>{const text=buildText();let copied=false;try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);copied=true}else{copied=legacyCopy(text)}}catch{copied=false}if(copied){fallback.style.display='none';status.textContent='已复制。请把内容发给双方确认后再开工。'}else{fallback.value=text;fallback.style.display='block';fallback.focus();fallback.select();status.textContent='浏览器没有开放复制权限，文本已显示在下方，可手动复制。'}});
+    document.querySelector('#example').addEventListener('click',()=>{const sample={project:'新品发布小红书图文',owner:'项目经理',deadline:'周三 18:00 完成终审',q1:'让第一次了解该品类的读者收藏内容，并进一步查看新品资料。',q2:'25–35 岁、重视专业依据的首次品类用户。',q3:'小红书 8 图；冷静、清楚，不采用实验室大片。',q4:'研发周期、已确认材料说明、品牌负责人引语。',q5:'不使用“第一、最好、绝对有效”等无法证明的表述。',q6:'项目经理收集意见；品牌负责人拥有最终发布批准权。'};Object.entries(sample).forEach(([key,text])=>fields[key].value=text);fallback.style.display='none';status.textContent='已载入合成示例。它不代表真实客户成果，可以直接修改。'});
+    document.querySelector('#reset').addEventListener('click',()=>{Object.values(fields).forEach(field=>field.value='');fallback.style.display='none';status.textContent='已清空。页面没有保存刚才填写的内容。';fields.project.focus()});
+  </script>
+</body>
+</html>

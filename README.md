@@ -7,6 +7,7 @@
 ## 当前公开资产
 
 - [首批使用页面](https://yehuan200800-bot.github.io/workflow-compound-lab/)
+- [开工前 6 问模板](https://yehuan200800-bot.github.io/workflow-compound-lab/template.html)
 - [完整合成案例](https://yehuan200800-bot.github.io/workflow-compound-lab/example.html)
 - [团队申请表](https://ccn1jng75pl0.feishu.cn/share/base/form/shrcnzNY9mWumQhec5Dzh5AJrxd)
 

@@ -8,17 +8,17 @@
   <style>
     :root { --ink:#18211b; --paper:#f1eddf; --acid:#d9ff52; --rust:#e75b35; --line:#283129; --muted:#657066; }
     * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Songti SC","STSong","Noto Serif CJK SC",serif; }
+    html { scroll-behavior:smooth; overflow-x:clip; }
+    body { margin:0; overflow-x:clip; color:var(--ink); background:var(--paper); font-family:"Songti SC","STSong","Noto Serif CJK SC",serif; }
     body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.23; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E"); }
     header, main, footer { width:min(1120px, calc(100% - 36px)); margin:auto; position:relative; }
     header { height:74px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); font-family:"FangSong","STFangsong",serif; }
-    .brand { font-weight:700; letter-spacing:.08em; }
-    .status { padding:7px 11px; border:1px solid; border-radius:100px; font-size:13px; background:var(--acid); }
+    .brand { min-width:0; font-weight:700; letter-spacing:.08em; }
+    .status { flex:0 0 auto; padding:7px 11px; border:1px solid; border-radius:100px; font-size:13px; white-space:nowrap; background:var(--acid); }
     .hero { min-height:620px; display:grid; grid-template-columns:1.35fr .65fr; gap:64px; align-items:center; padding:72px 0; }
     .eyebrow { font-family:"FangSong","STFangsong",serif; letter-spacing:.14em; font-size:13px; text-transform:uppercase; }
     h1 { margin:18px 0 24px; font-size:clamp(54px, 8.6vw, 118px); line-height:.92; letter-spacing:-.055em; font-weight:900; }
-    .lead { max-width:680px; font-size:clamp(18px, 2.2vw, 25px); line-height:1.65; }
+    .lead { max-width:680px; overflow-wrap:anywhere; font-size:clamp(18px, 2.2vw, 25px); line-height:1.65; }
     .scribble { display:inline; box-shadow:inset 0 -.36em 0 var(--acid); }
     .card { border:2px solid var(--line); padding:26px; background:#f8f5ea; box-shadow:10px 10px 0 var(--line); transform:rotate(1.5deg); }
     .card h2 { margin:0 0 16px; font-size:28px; }
@@ -41,6 +41,7 @@
     .arrow { display:grid; place-items:center; font-size:42px; }
     .truth { background:var(--ink); color:var(--paper); margin-inline:calc((100vw - 100%)/-2); padding:84px max(18px, calc((100vw - 1120px)/2)); }
     .truth blockquote { margin:0; max-width:1000px; font-size:clamp(34px, 5.8vw, 78px); line-height:1.15; }
+    .truth p { max-width:780px; margin:28px 0 0; font-size:18px; line-height:1.75; color:#d8d4c7; }
     .truth em { color:var(--acid); font-style:normal; }
     form { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
     label { display:grid; gap:8px; font-family:"FangSong","STFangsong",serif; }
@@ -57,7 +58,7 @@
     button:active { transform:translate(4px,4px); box-shadow:2px 2px 0 var(--line); }
     #feedback { grid-column:1/-1; min-height:24px; color:var(--rust); font-weight:700; }
     footer { padding:30px 0 60px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:13px; }
-    @media (max-width:760px) { .hero,.section-grid { grid-template-columns:1fr; gap:34px; } .hero { padding-top:48px; } .outputs,form,.example { grid-template-columns:1fr; } .arrow { transform:rotate(90deg); min-height:40px; } label.wide,button { grid-column:auto; } .kicker { position:static; } .card { transform:none; } }
+    @media (max-width:760px) { header { gap:12px; } .hero,.section-grid { grid-template-columns:minmax(0,1fr); gap:34px; } .hero { padding-top:48px; } .hero > *, .section-grid > *, .example > * { min-width:0; } .outputs,form,.example { grid-template-columns:minmax(0,1fr); } .arrow { transform:rotate(90deg); min-height:40px; } label.wide,button { grid-column:auto; } .kicker { position:static; } .card { transform:none; } .stamp { display:block; max-width:100%; font-size:15px; line-height:1.45; text-align:center; } }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .output { transition:none; } }
   </style>
 </head>
@@ -73,7 +74,7 @@
       <aside class="card">
         <h2>首批开放 5 家</h2>
         <ol><li>免费配置到飞书</li><li>用两个真实脱敏项目</li><li>我陪实际使用者跑通第一份</li><li>根据使用结果调整一次</li></ol>
-        <div class="stamp">当前版本永久保留</div>
+        <div class="stamp">首批免费试跑 · 不绑定后续付费</div>
       </aside>
     </section>
 
@@ -119,6 +120,7 @@
 
     <section class="truth">
       <blockquote>判断它有没有用的唯一标准：<em>你的团队下周还会不会继续用。</em></blockquote>
+      <p>首批免费只用于跑通真实项目。后续如果继续合作，持续交付来自运行复盘、缺失字段更新和流程调整，不是再卖一份模板。</p>
     </section>
 
     <section class="section section-grid" id="apply">

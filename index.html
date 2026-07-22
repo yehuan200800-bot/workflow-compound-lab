@@ -69,7 +69,7 @@
       <div>
         <div class="eyebrow">Feishu workflow · 需求共识与任务简报</div>
         <h1>别靠猜，<br>先把需求<br>说清楚。</h1>
-        <p class="lead">把客户零散的聊天记录、会议纪要和素材，整理成一份能直接开工的任务简报。<span class="scribble">不脑补、不漏项、不做到一半才返工。</span></p>
+        <p class="lead">把客户零散的聊天记录、会议纪要和素材，整理成一份能直接开工的任务简报。<span class="scribble">已确认、待确认和不可用素材，开工前分开标清。</span></p>
       </div>
       <aside class="card">
         <h2>首批开放 5 家</h2>
@@ -135,7 +135,7 @@
           <label>联系称呼<input name="name" required placeholder="怎么称呼你"></label>
           <label>团队人数<input name="size" inputmode="numeric" placeholder="3–20 人"></label>
           <label>每月项目数<input name="projects" inputmode="numeric" placeholder="大约数量"></label>
-          <label class="wide">最近一次因需求不清造成的返工<textarea name="problem" required placeholder="请描述真实情况，不需要写漂亮"></textarea></label>
+          <label class="wide">最近一次开工后才补充的信息<textarea name="problem" required placeholder="例如目标、素材依据或最终审核人；没有也可以如实写"></textarea></label>
           <button type="submit">复制申请信息（可选）</button>
           <div id="feedback" role="status" aria-live="polite"></div>
         </form>
@@ -149,7 +149,7 @@
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       const data = Object.fromEntries(new FormData(form));
-      const text = `种子团队申请\n团队：${data.team}\n联系人：${data.name}\n人数：${data.size || '未填'}\n每月项目数：${data.projects || '未填'}\n返工场景：${data.problem}`;
+      const text = `种子团队申请\n团队：${data.team}\n联系人：${data.name}\n人数：${data.size || '未填'}\n每月项目数：${data.projects || '未填'}\n开工后补充的信息：${data.problem}`;
       try { await navigator.clipboard.writeText(text); feedback.textContent = '已复制。现在打开上方飞书申请表，按对应字段填写或粘贴。'; }
       catch { feedback.textContent = text; }
     });

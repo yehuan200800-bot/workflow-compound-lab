@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yehuan200800-bot.github.io/workflow-compound-lab/sitemap.xml

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="视频制作团队的开工 Brief 合成案例：从一句模糊的品牌片需求，拆出交付版本、素材授权、修改边界和最终审核人。">
+  <link rel="canonical" href="https://yehuan200800-bot.github.io/workflow-compound-lab/video-production-brief.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23171918'/%3E%3Cpath d='M8 13h48v38H8z' fill='none' stroke='%23f15a32' stroke-width='5'/%3E%3Cpath d='M8 25h48M24 13l-8 12m24-12-8 12m24-12-8 12' stroke='%23f5efde' stroke-width='4'/%3E%3C/svg%3E">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="流程复利实验室">
+  <meta property="og:title" content="视频制作开工 Brief｜完整合成案例">
+  <meta property="og:description" content="把品牌片的一句模糊要求，整理成已确认、待确认和不能擅自假设的开工信息。">
+  <meta property="og:url" content="https://yehuan200800-bot.github.io/workflow-compound-lab/video-production-brief.html">
+  <meta property="og:image" content="https://yehuan200800-bot.github.io/workflow-compound-lab/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="视频制作开工 Brief｜完整合成案例">
+  <meta name="twitter:description" content="从模糊品牌片需求到可检查的一页开工 Brief。">
+  <meta name="twitter:image" content="https://yehuan200800-bot.github.io/workflow-compound-lab/og.png">
+  <title>视频制作开工 Brief｜流程复利实验室</title>
+  <style>
+    :root {
+      --ink:#171918;
+      --paper:#f5efde;
+      --orange:#f15a32;
+      --blue:#3478f6;
+      --green:#78b66d;
+      --fog:#d8d1bf;
+      --muted:#67685f;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; overflow-x:clip; }
+    body { margin:0; overflow-x:clip; color:var(--ink); background:var(--paper); font-family:"Kaiti SC","STKaiti","FangSong","STFangsong",serif; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.24; background-image:linear-gradient(rgba(23,25,24,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(23,25,24,.07) 1px,transparent 1px); background-size:28px 28px; }
+    a { color:inherit; }
+    button { font:inherit; }
+    .shell { width:min(1180px,calc(100% - 34px)); margin:auto; position:relative; }
+    .topbar { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px; border-bottom:2px solid var(--ink); font-size:14px; }
+    .topbar a { text-decoration:none; border-bottom:1px solid; }
+    .badge { flex:0 0 auto; padding:7px 10px; border:2px solid var(--orange); color:var(--orange); font-weight:700; transform:rotate(-1deg); }
+    .hero { min-height:680px; display:grid; grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr); gap:54px; align-items:center; padding:70px 0 52px; }
+    .eyebrow { font:700 12px/1.4 ui-monospace,"SFMono-Regular",Menlo,monospace; letter-spacing:.18em; text-transform:uppercase; }
+    h1 { margin:16px 0 22px; max-width:800px; font-size:clamp(56px,9vw,126px); line-height:.86; letter-spacing:-.075em; font-weight:900; }
+    .lead { max-width:730px; margin:0; font-size:clamp(19px,2.3vw,27px); line-height:1.6; }
+    .lead mark { color:inherit; background:linear-gradient(transparent 55%,rgba(241,90,50,.65) 55%); }
+    .slate { background:var(--ink); color:var(--paper); border:2px solid var(--ink); box-shadow:12px 12px 0 var(--orange); transform:rotate(1.2deg); }
+    .slate-head { min-height:82px; display:grid; grid-template-columns:repeat(5,1fr); border-bottom:3px solid var(--paper); overflow:hidden; }
+    .stripe { border-right:3px solid var(--paper); transform:skewX(-22deg) scaleX(1.15); background:var(--paper); }
+    .stripe:nth-child(even) { background:var(--ink); }
+    .slate-body { padding:28px; }
+    .slate-body strong { display:block; margin-bottom:20px; color:var(--orange); font:700 12px ui-monospace,"SFMono-Regular",Menlo,monospace; letter-spacing:.14em; }
+    .slate-row { display:grid; grid-template-columns:100px 1fr; gap:12px; padding:11px 0; border-bottom:1px solid rgba(245,239,222,.28); }
+    .slate-row span:first-child { color:#a9aa9f; }
+    .slate-row span:last-child { font-size:18px; }
+    .warning { grid-column:1/-1; margin-top:18px; padding:12px; color:var(--ink); background:var(--orange); font-weight:700; text-align:center; }
+    .chapter { border-top:2px solid var(--ink); padding:74px 0; }
+    .chapter-head { display:grid; grid-template-columns:180px 1fr; gap:42px; margin-bottom:38px; }
+    .chapter-no { font:700 13px ui-monospace,"SFMono-Regular",Menlo,monospace; letter-spacing:.12em; color:var(--muted); }
+    h2 { margin:0; max-width:850px; font-size:clamp(38px,6vw,76px); line-height:1; letter-spacing:-.045em; }
+    h3 { margin:0 0 14px; font-size:25px; }
+    p,li { font-size:17px; line-height:1.75; }
+    .raw { padding:32px; background:#fffaf0; border:2px solid var(--ink); box-shadow:8px 8px 0 var(--ink); }
+    blockquote { margin:0; font-size:clamp(20px,2.5vw,30px); line-height:1.65; }
+    blockquote::before { content:"REC / CLIENT VOICE"; display:block; margin-bottom:18px; color:var(--orange); font:700 12px ui-monospace,"SFMono-Regular",Menlo,monospace; letter-spacing:.15em; }
+    .asset-row { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:20px; }
+    .asset { min-height:96px; padding:17px; border:1px solid var(--ink); background:rgba(255,255,255,.25); }
+    .asset b { display:block; margin-bottom:7px; font:700 12px ui-monospace,"SFMono-Regular",Menlo,monospace; color:var(--orange); }
+    .lanes { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .lane { border:2px solid var(--ink); background:#fffaf0; }
+    .lane h3 { margin:0; padding:17px 18px; border-bottom:2px solid var(--ink); color:var(--paper); background:var(--ink); font:700 14px ui-monospace,"SFMono-Regular",Menlo,monospace; letter-spacing:.06em; }
+    .lane.confirmed h3 { background:var(--green); color:var(--ink); }
+    .lane.pending h3 { background:var(--blue); }
+    .lane.blocked h3 { background:var(--orange); color:var(--ink); }
+    .lane ul { margin:0; padding:20px 24px 20px 40px; }
+    .lane li+li { margin-top:12px; }
+    .brief { padding:0; border:3px solid var(--ink); background:#fffaf0; box-shadow:12px 12px 0 var(--ink); }
+    .brief-title { display:flex; justify-content:space-between; gap:20px; align-items:flex-start; padding:24px 28px; color:var(--paper); background:var(--ink); }
+    .brief-title h2 { font-size:clamp(32px,4.8vw,60px); }
+    .version { flex:0 0 auto; color:var(--orange); font:700 12px ui-monospace,"SFMono-Regular",Menlo,monospace; }
+    .brief-grid { display:grid; grid-template-columns:repeat(2,1fr); }
+    .brief-section { min-height:210px; padding:25px 28px; border-right:1px solid var(--ink); border-bottom:1px solid var(--ink); }
+    .brief-section:nth-child(even) { border-right:0; }
+    .brief-section.wide { grid-column:1/-1; border-right:0; }
+    .brief-section h3 { display:flex; align-items:center; gap:10px; }
+    .brief-section h3::before { content:""; width:12px; height:12px; background:var(--orange); }
+    .brief-section ul { margin:0; padding-left:22px; }
+    .unknown { color:var(--blue); font-weight:700; text-decoration:underline; text-decoration-style:wavy; text-underline-offset:3px; }
+    .no-assume { color:#a43b20; font-weight:700; }
+    .gates { display:grid; gap:8px; }
+    .gate { display:grid; grid-template-columns:160px 1fr 130px; gap:14px; align-items:center; padding:15px 17px; border:1px solid var(--ink); background:rgba(255,255,255,.3); }
+    .gate b { font:700 13px ui-monospace,"SFMono-Regular",Menlo,monospace; }
+    .gate span:last-child { text-align:right; color:var(--muted); }
+    .cta { margin:78px 0; padding:44px; color:var(--paper); background:var(--ink); box-shadow:12px 12px 0 var(--orange); }
+    .cta h2 { max-width:900px; }
+    .cta p { max-width:760px; color:#d4d0c4; }
+    .cta-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+    .cta a,.cta button { display:inline-block; cursor:pointer; padding:15px 19px; border:2px solid var(--paper); color:var(--ink); background:var(--paper); text-decoration:none; font-weight:700; }
+    .cta a.secondary { color:var(--paper); background:transparent; }
+    .cta button { border-color:var(--orange); background:var(--orange); }
+    .micro { margin-top:14px!important; font-size:14px; }
+    footer { display:flex; justify-content:space-between; gap:20px; padding:28px 0 50px; border-top:2px solid var(--ink); color:var(--muted); font-size:13px; }
+    @media (max-width:780px) {
+      .hero,.chapter-head,.lanes,.brief-grid { grid-template-columns:minmax(0,1fr); }
+      .hero { min-height:auto; gap:42px; padding-top:52px; }
+      .chapter-head { gap:18px; }
+      .asset-row { grid-template-columns:1fr; }
+      .brief-section,.brief-section:nth-child(even) { border-right:0; }
+      .brief-section.wide { grid-column:auto; }
+      .gate { grid-template-columns:1fr; gap:6px; }
+      .gate span:last-child { text-align:left; }
+      .slate { transform:none; box-shadow:8px 8px 0 var(--orange); }
+      .cta { padding:28px; }
+      footer { flex-direction:column; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print { body::before,.topbar,.cta button{display:none}.shell{width:100%}.hero{min-height:auto;padding:25px 0}.chapter{padding:30px 0}.slate,.raw,.brief,.cta{box-shadow:none}.cta{margin:30px 0} }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a href="index.html">← 流程复利实验室</a>
+    <span class="badge">合成案例 · 非客户成果</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Production brief / synthetic sample 002</div>
+        <h1>“拍得高级一点”不能直接开机。</h1>
+        <p class="lead">视频项目开工前，把<mark>版本、素材授权、修改边界和最终审核人</mark>放到同一张工作台上。未知就标未知，不替客户补答案。</p>
+      </div>
+      <aside class="slate" aria-label="案例场记板">
+        <div class="slate-head" aria-hidden="true"><i class="stripe"></i><i class="stripe"></i><i class="stripe"></i><i class="stripe"></i><i class="stripe"></i></div>
+        <div class="slate-body">
+          <strong>PROJECT SLATE / 002</strong>
+          <div class="slate-row"><span>项目</span><span>新品品牌短片</span></div>
+          <div class="slate-row"><span>当前状态</span><span>待开工确认</span></div>
+          <div class="slate-row"><span>首版日期</span><span>尚未确认</span></div>
+          <div class="slate-row"><span>最终批准</span><span>尚未确认</span></div>
+          <div class="warning">本案例完全合成，不来自任何公司的客户资料</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="chapter" id="raw">
+      <div class="chapter-head"><div class="chapter-no">01 / RAW INPUT</div><h2>客户原话看似具体，仍然不能排拍摄表。</h2></div>
+      <div class="raw">
+        <blockquote>下个月要去东京拍一条新品品牌片，大概 60 到 90 秒，想要国际化、高级，但不要太像广告。创始人可能会出镜，也想拍一点办公室和城市氛围。横版先做，竖版和 15 秒短版如果方便也一起出。音乐你们帮忙找，之前的产品图和 Logo 应该都能用。月底活动要播，最好提前一周给我们看第一版。市场部先看，老板最后可能还会改。预算先按之前差不多，你们先出方案。</blockquote>
+        <div class="asset-row">
+          <div class="asset"><b>ASSET 01</b>旧版 Logo 文件，版本与使用范围未确认</div>
+          <div class="asset"><b>ASSET 02</b>三张产品图，拍摄者与授权范围未知</div>
+          <div class="asset"><b>ASSET 03</b>一条风格参考片，客户未说明具体参考什么</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="lanes">
+      <div class="chapter-head"><div class="chapter-no">02 / THREE LANES</div><h2>先分三栏：已确认、待决定、不能擅自假设。</h2></div>
+      <div class="lanes">
+        <article class="lane confirmed">
+          <h3>CONFIRMED / 已确认</h3>
+          <ul><li>主要交付为新品品牌短片</li><li>拍摄城市为东京</li><li>活动现场需要播放成片</li><li>市场部参与初审</li></ul>
+        </article>
+        <article class="lane pending">
+          <h3>PENDING / 待客户决定</h3>
+          <ul><li>60 秒还是 90 秒主版</li><li>是否同时交付竖版与 15 秒版</li><li>创始人是否出镜及可用时间</li><li>第一版、终版的具体日期</li><li>市场部与老板的审核顺序</li></ul>
+        </article>
+        <article class="lane blocked">
+          <h3>DO NOT ASSUME / 不可代答</h3>
+          <ul><li>“高级、国际化”对应的画面依据</li><li>音乐、产品图与 Logo 的授权范围</li><li>东京场地、人物与街景许可</li><li>“和之前差不多”的预算金额</li><li>修改是否包含补拍和结构重做</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="chapter" id="brief">
+      <div class="chapter-head"><div class="chapter-no">03 / ONE-PAGE BRIEF</div><h2>信息没齐，也能输出一份诚实的开工 Brief。</h2></div>
+      <article class="brief">
+        <div class="brief-title"><h2>新品品牌短片｜开工 Brief</h2><span class="version">V0.1 / 待确认</span></div>
+        <div class="brief-grid">
+          <section class="brief-section">
+            <h3>目标与使用场景</h3>
+            <p>为月底活动制作新品品牌短片，并可能用于后续线上传播。希望形成“国际化、高级”的品牌感受，但对应的画面依据与目标观众为<span class="unknown">未知</span>。</p>
+          </section>
+          <section class="brief-section">
+            <h3>交付物</h3>
+            <ul><li>横版主片：60–90 秒，最终时长<span class="unknown">待定</span></li><li>竖版与 15 秒短版：<span class="unknown">是否包含待定</span></li><li>字幕、语言、分辨率与交付格式：<span class="unknown">待定</span></li></ul>
+          </section>
+          <section class="brief-section">
+            <h3>拍摄范围</h3>
+            <ul><li>地点：东京，具体场地<span class="unknown">待定</span></li><li>人物：创始人可能出镜，档期与台词<span class="unknown">待定</span></li><li>画面：办公室、城市氛围、产品镜头</li><li>许可：场地、人物与街景使用范围<span class="unknown">待确认</span></li></ul>
+          </section>
+          <section class="brief-section">
+            <h3>素材与授权</h3>
+            <ul><li>Logo、产品图只在来源和授权确认后使用</li><li>音乐由制作方提案，客户确认授权方案与费用</li><li class="no-assume">不得把“之前用过”视为本次仍可公开使用</li></ul>
+          </section>
+          <section class="brief-section">
+            <h3>审核与修改</h3>
+            <ul><li>市场部初审；老板是否终审<span class="unknown">待确认</span></li><li>标准修改轮次：<span class="unknown">待双方写入合同或排期</span></li><li>文案、镜头顺序与色彩调整可列入修改</li><li class="no-assume">补拍、重做脚本或新增版本不能默认算普通修改</li></ul>
+          </section>
+          <section class="brief-section">
+            <h3>时间与预算</h3>
+            <ul><li>活动日期、第一版与终版日期：<span class="unknown">待补</span></li><li>脚本、分镜、拍摄、剪辑各节点：信息齐后排期</li><li>“按之前差不多”不是预算；币种、税费、差旅与版权费用<span class="unknown">待确认</span></li></ul>
+          </section>
+          <section class="brief-section wide">
+            <h3>开工前的责任与截止</h3>
+            <div class="gates">
+              <div class="gate"><b>客户项目负责人</b><span>确认主版时长、版本数量、活动日期与预算</span><span>脚本前</span></div>
+              <div class="gate"><b>品牌 / 市场负责人</b><span>给出“高级、国际化”的参考依据与明确禁区</span><span>创意提案前</span></div>
+              <div class="gate"><b>制作负责人</b><span>核验场地、人物、音乐和现有素材的授权与成本</span><span>拍摄排期前</span></div>
+              <div class="gate"><b>最终批准人</b><span>确认审核顺序、修改边界与最终签字人</span><span>开机前</span></div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </section>
+
+    <section class="cta" id="try">
+      <h2>拿一条真实、已脱敏的视频需求试一次。</h2>
+      <p>不需要客户姓名、联系方式或完整聊天记录。只保留交付物、目标、限制、素材来源、截止时间和审核关系；第一份由我陪实际使用者整理。</p>
+      <div class="cta-actions">
+        <a href="https://www.xiaohongshu.com/user/profile/691807a0000000003702a03c" target="_blank" rel="noopener">先私信“试跑” →</a>
+        <a class="secondary" href="example.html">查看通用内容案例 →</a>
+        <button type="button" id="print">打印 / 保存为 PDF</button>
+      </div>
+      <p class="micro">本页不采集任何输入；真实案例公开前必须另行获得脱敏与引用许可。</p>
+    </section>
+  </main>
+
+  <footer class="shell"><span>流程复利实验室 © 2026</span><span>视频制作开工 Brief · 合成案例 002</span></footer>
+  <script>
+    document.querySelector('#print').addEventListener('click',()=>window.print());
+  </script>
+</body>
+</html>
